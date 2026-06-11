@@ -1,0 +1,78 @@
+{
+  "agents": [
+    {
+      "agent_id": "69ec55b100909ed28e9a6f6b",
+      "name": "Defect Hunter",
+      "description": "Amazon listing compliance auditor that analyzes scraped product data against Amazon's listing guidelines and identifies defects, policy violations, and optimization opportunities.",
+      "model": "openai/gpt-4.1",
+      "provider_id": "openai",
+      "temperature": 0.2,
+      "top_p": 0.9,
+      "file_output": false,
+      "voice_config": null,
+      "image_output_config": null
+    },
+    {
+      "agent_id": "69ec5eecc2c6ef271d513837",
+      "name": "Discovery Agent",
+      "description": "AI shopping assistant discovery simulator that takes scraped Amazon product listing data and simulates 10 realistic shopper intent queries that an AI shopping assistant (like Amazon Rufus) might receive for this product. For each query, it determines whether the listing would match, partially match, or miss based on the listing content. It outputs a discovery match rate percentage and lists which queries the listing fails. Each query is labeled with the type of match it tests: product match, use-case match, or specification match.",
+      "model": "openai/gpt-4.1",
+      "provider_id": "openai",
+      "temperature": 0.3,
+      "top_p": 0.9,
+      "file_output": false,
+      "voice_config": null,
+      "image_output_config": null
+    },
+    {
+      "agent_id": "69ec61d402d94d1a4c21c2b8",
+      "name": "AE Visibility Agent",
+      "description": "Answer Engine Visibility Query Generator that takes scraped Amazon product listing data and generates 10 realistic shopper queries that a consumer might type into Google Gemini AI search, based on the product's category, title, key attributes, and bullet points.",
+      "model": "openai/gpt-4.1",
+      "provider_id": "openai",
+      "temperature": 0.4,
+      "top_p": 0.9,
+      "file_output": false,
+      "voice_config": null,
+      "image_output_config": null
+    },
+    {
+      "agent_id": "69ec677a25fab808843feca5",
+      "name": "Competitor Gap Agent",
+      "description": "Competitor gap analysis agent that takes scraped Amazon product listing data and performs competitive analysis. It identifies the product category from breadcrumbs and title, finds 2-3 competing products in the same category on Amazon India, and compares structural attributes, bullet topics, and title structure of competitors against this listing. It outputs specific gaps: attributes competitors surface that this listing lacks, bullet topics competitors cover that this listing misses, and title keywords competitors use that this listing does not.",
+      "model": "perplexity/sonar-pro",
+      "provider_id": "perplexity",
+      "temperature": 0.3,
+      "top_p": 0.9,
+      "file_output": false,
+      "voice_config": null,
+      "image_output_config": null
+    },
+    {
+      "agent_id": "69ec6dd03f7664b6c5b537f2",
+      "name": "Rewrite Agent",
+      "description": "AI-powered listing content rewriter that takes scraped Amazon product data along with findings from DefectHunter, Discovery Agent, and Competitor Gap Agent, and proposes AI-optimized rewrites of the product title, bullet points, and description.",
+      "model": "openai/gpt-4.1",
+      "provider_id": "openai",
+      "temperature": 0.4,
+      "top_p": 0.9,
+      "file_output": false,
+      "voice_config": null,
+      "image_output_config": null
+    },
+    {
+      "agent_id": "69ec75352aed0bb18664bccb",
+      "name": "QA Auditor",
+      "description": "Final quality assurance auditor that reviews outputs from all agents (Defect Hunter, Discovery Agent, AE Visibility Agent, Competitor Gap Agent, and Rewrite Agent), flags conflicts between agent recommendations, assigns confidence scores (0-100) to each recommendation, routes low-confidence items (<70) to human review, and computes a final AI Readiness Score.",
+      "model": "openai/gpt-4.1",
+      "provider_id": "openai",
+      "temperature": 0.15,
+      "top_p": 0.9,
+      "file_output": false,
+      "voice_config": null,
+      "image_output_config": null
+    }
+  ],
+  "rag_ids": [],
+  "schedules": []
+}

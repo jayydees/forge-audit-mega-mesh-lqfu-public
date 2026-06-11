@@ -1,0 +1,114 @@
+{
+  "agent_name": "Competitor Gap Agent",
+  "agent_id": "69ec677a25fab808843feca5",
+  "description": "Competitor gap analysis agent that takes scraped Amazon product listing data and performs competitive analysis. It identifies the product category from breadcrumbs and title, finds 2-3 competing products in the same category on Amazon India, and compares structural attributes, bullet topics, and title structure of competitors against this listing. It outputs specific gaps: attributes competitors surface that this listing lacks, bullet topics competitors cover that this listing misses, and title keywords competitors use that this listing does not.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "asin": "string",
+    "product_title": "string",
+    "identified_category": "string",
+    "competitors": [
+      {
+        "asin": "string",
+        "title": "string",
+        "brand": "string",
+        "price": "string",
+        "rating": "string",
+        "review_count": "string",
+        "key_attributes": [
+          "string"
+        ],
+        "bullet_topics": [
+          "string"
+        ],
+        "title_keywords": [
+          "string"
+        ]
+      }
+    ],
+    "attribute_gaps": [
+      {
+        "attribute": "string",
+        "competitor_value": "string",
+        "competitor_brand": "string",
+        "gap_type": "string",
+        "recommendation": "string"
+      }
+    ],
+    "bullet_gaps": [
+      {
+        "topic": "string",
+        "competitor_example": "string",
+        "competitor_brand": "string",
+        "recommendation": "string"
+      }
+    ],
+    "title_keyword_gaps": [
+      {
+        "keyword": "string",
+        "used_by": [
+          "string"
+        ],
+        "recommendation": "string"
+      }
+    ],
+    "summary": "string",
+    "total_gaps": "number",
+    "critical_gaps": "number"
+  },
+  "example_response": {
+    "asin": "sample string",
+    "product_title": "sample string",
+    "identified_category": "sample string",
+    "competitors": [
+      {
+        "asin": "sample string",
+        "title": "sample string",
+        "brand": "sample string",
+        "price": "sample string",
+        "rating": "sample string",
+        "review_count": "sample string",
+        "key_attributes": [
+          "sample string"
+        ],
+        "bullet_topics": [
+          "sample string"
+        ],
+        "title_keywords": [
+          "sample string"
+        ]
+      }
+    ],
+    "attribute_gaps": [
+      {
+        "attribute": "sample string",
+        "competitor_value": "sample string",
+        "competitor_brand": "sample string",
+        "gap_type": "sample string",
+        "recommendation": "sample string"
+      }
+    ],
+    "bullet_gaps": [
+      {
+        "topic": "sample string",
+        "competitor_example": "sample string",
+        "competitor_brand": "sample string",
+        "recommendation": "sample string"
+      }
+    ],
+    "title_keyword_gaps": [
+      {
+        "keyword": "sample string",
+        "used_by": [
+          "sample string"
+        ],
+        "recommendation": "sample string"
+      }
+    ],
+    "summary": "sample string",
+    "total_gaps": 0,
+    "critical_gaps": 0
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "agent_name": "QA Auditor",
+  "agent_id": "69ec75352aed0bb18664bccb",
+  "description": "Final quality assurance auditor that reviews outputs from all agents (Defect Hunter, Discovery Agent, AE Visibility Agent, Competitor Gap Agent, and Rewrite Agent), flags conflicts between agent recommendations, assigns confidence scores (0-100) to each recommendation, routes low-confidence items (<70) to human review, and computes a final AI Readiness Score.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "asin": "string",
+    "product_title": "string",
+    "ai_readiness_score": "number",
+    "score_breakdown": {
+      "defect_free_pct": "number",
+      "attribute_completeness_pct": "number",
+      "discovery_match_rate": "number",
+      "ae_visibility_score": "number",
+      "qa_confidence_avg": "number"
+    },
+    "conflicts": [
+      {
+        "id": "string",
+        "agent_a": "string",
+        "agent_b": "string",
+        "agent_a_position": "string",
+        "agent_b_position": "string",
+        "agent_a_reasoning": "string",
+        "agent_b_reasoning": "string",
+        "agent_a_confidence": "number",
+        "agent_b_confidence": "number",
+        "field": "string",
+        "severity": "string",
+        "resolution_suggestion": "string"
+      }
+    ],
+    "recommendations": [
+      {
+        "source_agent": "string",
+        "recommendation": "string",
+        "field": "string",
+        "confidence": "number",
+        "needs_human_review": "boolean",
+        "review_reason": "string"
+      }
+    ],
+    "human_review_queue": [
+      {
+        "source_agent": "string",
+        "recommendation": "string",
+        "field": "string",
+        "confidence": "number",
+        "reason": "string"
+      }
+    ],
+    "audit_log": [
+      {
+        "timestamp": "string",
+        "agent": "string",
+        "action_type": "string",
+        "field": "string",
+        "detail": "string",
+        "asin": "string"
+      }
+    ],
+    "summary": "string"
+  },
+  "example_response": {
+    "asin": "sample string",
+    "product_title": "sample string",
+    "ai_readiness_score": 0,
+    "score_breakdown": {
+      "defect_free_pct": 0,
+      "attribute_completeness_pct": 0,
+      "discovery_match_rate": 0,
+      "ae_visibility_score": 0,
+      "qa_confidence_avg": 0
+    },
+    "conflicts": [
+      {
+        "id": "sample string",
+        "agent_a": "sample string",
+        "agent_b": "sample string",
+        "agent_a_position": "sample string",
+        "agent_b_position": "sample string",
+        "agent_a_reasoning": "sample string",
+        "agent_b_reasoning": "sample string",
+        "agent_a_confidence": 0,
+        "agent_b_confidence": 0,
+        "field": "sample string",
+        "severity": "sample string",
+        "resolution_suggestion": "sample string"
+      }
+    ],
+    "recommendations": [
+      {
+        "source_agent": "sample string",
+        "recommendation": "sample string",
+        "field": "sample string",
+        "confidence": 0,
+        "needs_human_review": false,
+        "review_reason": "sample string"
+      }
+    ],
+    "human_review_queue": [
+      {
+        "source_agent": "sample string",
+        "recommendation": "sample string",
+        "field": "sample string",
+        "confidence": 0,
+        "reason": "sample string"
+      }
+    ],
+    "audit_log": [
+      {
+        "timestamp": "sample string",
+        "agent": "sample string",
+        "action_type": "sample string",
+        "field": "sample string",
+        "detail": "sample string",
+        "asin": "sample string"
+      }
+    ],
+    "summary": "sample string"
+  }
+}

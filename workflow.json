@@ -1,0 +1,28 @@
+{
+  "nodes": [
+    {"id": "input_node", "type": "Input", "label": "Amazon Product Data", "nodeCategory": "input"},
+    {"id": "defect_hunter", "type": "Agent", "label": "Defect Hunter Agent", "nodeCategory": "agent"},
+    {"id": "discovery_agent", "type": "Agent", "label": "Discovery Agent", "nodeCategory": "agent"},
+    {"id": "ae_visibility_agent", "type": "Agent", "label": "AE Visibility Agent", "nodeCategory": "agent"},
+    {"id": "competitor_gap_agent", "type": "Agent", "label": "Competitor Gap Agent", "nodeCategory": "agent"},
+    {"id": "rewrite_agent", "type": "Agent", "label": "Rewrite Agent", "nodeCategory": "agent"},
+    {"id": "qa_auditor", "type": "Agent", "label": "QA Auditor Agent", "nodeCategory": "agent"},
+    {"id": "output_node", "type": "Output", "label": "Audit Results", "nodeCategory": "end"}
+  ],
+  "edges": [
+    {"source": "input_node", "target": "defect_hunter"},
+    {"source": "input_node", "target": "discovery_agent"},
+    {"source": "input_node", "target": "ae_visibility_agent"},
+    {"source": "input_node", "target": "competitor_gap_agent"},
+    {"source": "input_node", "target": "rewrite_agent"},
+    {"source": "defect_hunter", "target": "rewrite_agent"},
+    {"source": "discovery_agent", "target": "rewrite_agent"},
+    {"source": "competitor_gap_agent", "target": "rewrite_agent"},
+    {"source": "defect_hunter", "target": "qa_auditor"},
+    {"source": "discovery_agent", "target": "qa_auditor"},
+    {"source": "ae_visibility_agent", "target": "qa_auditor"},
+    {"source": "competitor_gap_agent", "target": "qa_auditor"},
+    {"source": "rewrite_agent", "target": "qa_auditor"},
+    {"source": "qa_auditor", "target": "output_node"}
+  ]
+}

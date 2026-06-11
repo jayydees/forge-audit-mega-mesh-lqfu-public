@@ -1,0 +1,44 @@
+{
+  "agent_name": "AE Visibility Agent",
+  "agent_id": "69ec61d402d94d1a4c21c2b8",
+  "description": "Answer Engine Visibility Query Generator that takes scraped Amazon product listing data and generates 10 realistic shopper queries that a consumer might type into Google Gemini AI search, based on the product's category, title, key attributes, and bullet points.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "asin": "string",
+    "product_title": "string",
+    "brand": "string",
+    "category": "string",
+    "key_attributes": [
+      "string"
+    ],
+    "queries": [
+      {
+        "query": "string",
+        "query_type": "string",
+        "relevant_attributes": [
+          "string"
+        ]
+      }
+    ]
+  },
+  "example_response": {
+    "asin": "sample string",
+    "product_title": "sample string",
+    "brand": "sample string",
+    "category": "sample string",
+    "key_attributes": [
+      "sample string"
+    ],
+    "queries": [
+      {
+        "query": "sample string",
+        "query_type": "sample string",
+        "relevant_attributes": [
+          "sample string"
+        ]
+      }
+    ]
+  }
+}

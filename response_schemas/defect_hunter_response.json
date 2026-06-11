@@ -1,0 +1,146 @@
+{
+  "agent_name": "Defect Hunter",
+  "agent_id": "69ec55b100909ed28e9a6f6b",
+  "description": "Amazon listing compliance auditor that analyzes scraped product data against Amazon's listing guidelines and identifies defects, policy violations, and optimization opportunities.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "asin": "string",
+    "product_title": "string",
+    "overall_score": "number",
+    "total_defects": "number",
+    "critical_defects": "number",
+    "major_defects": "number",
+    "minor_defects": "number",
+    "title_analysis": {
+      "char_count": "number",
+      "max_allowed": "number",
+      "is_compliant": "boolean",
+      "title_case_violations": [
+        "string"
+      ],
+      "keyword_stuffing_detected": "boolean",
+      "issues": [
+        "string"
+      ]
+    },
+    "image_analysis": {
+      "total_images": "number",
+      "min_recommended": "number",
+      "has_sufficient_images": "boolean",
+      "main_image_issues": [
+        "string"
+      ],
+      "general_image_issues": [
+        "string"
+      ]
+    },
+    "attribute_analysis": {
+      "total_attributes": "number",
+      "pollution_detected": "boolean",
+      "polluted_fields": [
+        "string"
+      ],
+      "missing_critical": [
+        "string"
+      ],
+      "title_conflicts": [
+        "string"
+      ]
+    },
+    "content_analysis": {
+      "bullet_count": "number",
+      "has_aplus_content": "boolean",
+      "vague_claims": [
+        "string"
+      ],
+      "keyword_stuffing_bullets": "boolean"
+    },
+    "defects": [
+      {
+        "severity": "string",
+        "category": "string",
+        "description": "string",
+        "field": "string",
+        "recommendation": "string",
+        "suppression_risk": "string",
+        "suppression_reason": "string"
+      }
+    ],
+    "summary": "string"
+  },
+  "example_response": {
+    "asin": "sample string",
+    "product_title": "sample string",
+    "overall_score": 0,
+    "total_defects": 0,
+    "critical_defects": 0,
+    "major_defects": 0,
+    "minor_defects": 0,
+    "title_analysis": {
+      "char_count": 0,
+      "max_allowed": 0,
+      "is_compliant": false,
+      "title_case_violations": [
+        "sample string"
+      ],
+      "keyword_stuffing_detected": false,
+      "issues": [
+        "sample string"
+      ]
+    },
+    "image_analysis": {
+      "total_images": 0,
+      "min_recommended": 0,
+      "has_sufficient_images": false,
+      "main_image_issues": [
+        "sample string"
+      ],
+      "general_image_issues": [
+        "sample string"
+      ]
+    },
+    "attribute_analysis": {
+      "total_attributes": 0,
+      "pollution_detected": false,
+      "polluted_fields": [
+        "sample string"
+      ],
+      "missing_critical": [
+        "sample string"
+      ],
+      "title_conflicts": [
+        "sample string"
+      ]
+    },
+    "content_analysis": {
+      "bullet_count": 0,
+      "has_aplus_content": false,
+      "vague_claims": [
+        "sample string"
+      ],
+      "keyword_stuffing_bullets": false
+    },
+    "defects": [
+      {
+        "severity": "sample string",
+        "category": "sample string",
+        "description": "sample string",
+        "field": "sample string",
+        "recommendation": "sample string",
+        "suppression_risk": "high",
+        "suppression_reason": "sample string"
+      }
+    ],
+    "summary": "sample string"
+  },
+  "has_module_outputs": true,
+  "module_outputs_example": {
+    "artifact_files": [
+      {
+        "file_url": "https://example.com/image.png"
+      }
+    ]
+  }
+}

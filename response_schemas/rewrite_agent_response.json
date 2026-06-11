@@ -1,0 +1,90 @@
+{
+  "agent_name": "Rewrite Agent",
+  "agent_id": "69ec6dd03f7664b6c5b537f2",
+  "description": "AI-powered listing content rewriter that takes scraped Amazon product data along with findings from DefectHunter, Discovery Agent, and Competitor Gap Agent, and proposes AI-optimized rewrites of the product title, bullet points, and description.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "original_title": "string",
+    "rewritten_title": "string",
+    "title_char_count": "number",
+    "title_changes": [
+      {
+        "change_type": "string",
+        "detail": "string"
+      }
+    ],
+    "original_bullets": [
+      "string"
+    ],
+    "rewritten_bullets": [
+      "string"
+    ],
+    "bullet_changes": [
+      {
+        "bullet_index": "number",
+        "change_type": "string",
+        "detail": "string"
+      }
+    ],
+    "original_description": "string",
+    "rewritten_description": "string",
+    "description_generated": "boolean",
+    "description_changes": [
+      {
+        "change_type": "string",
+        "detail": "string"
+      }
+    ],
+    "incorporated_competitor_gaps": [
+      "string"
+    ],
+    "incorporated_discovery_terms": [
+      "string"
+    ],
+    "improvement_summary": "string",
+    "confidence_score": "number"
+  },
+  "example_response": {
+    "original_title": "sample string",
+    "rewritten_title": "sample string",
+    "title_char_count": 0,
+    "title_changes": [
+      {
+        "change_type": "sample string",
+        "detail": "sample string"
+      }
+    ],
+    "original_bullets": [
+      "sample string"
+    ],
+    "rewritten_bullets": [
+      "sample string"
+    ],
+    "bullet_changes": [
+      {
+        "bullet_index": 0,
+        "change_type": "sample string",
+        "detail": "sample string"
+      }
+    ],
+    "original_description": "sample",
+    "rewritten_description": "sample string",
+    "description_generated": false,
+    "description_changes": [
+      {
+        "change_type": "sample string",
+        "detail": "sample string"
+      }
+    ],
+    "incorporated_competitor_gaps": [
+      "sample string"
+    ],
+    "incorporated_discovery_terms": [
+      "sample string"
+    ],
+    "improvement_summary": "sample string",
+    "confidence_score": 0
+  }
+}

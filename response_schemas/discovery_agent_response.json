@@ -1,0 +1,58 @@
+{
+  "agent_name": "Discovery Agent",
+  "agent_id": "69ec5eecc2c6ef271d513837",
+  "description": "AI shopping assistant discovery simulator that takes scraped Amazon product listing data and simulates 10 realistic shopper intent queries that an AI shopping assistant (like Amazon Rufus) might receive for this product. For each query, it determines whether the listing would match, partially match, or miss based on the listing content. It outputs a discovery match rate percentage and lists which queries the listing fails. Each query is labeled with the type of match it tests: product match, use-case match, or specification match.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "asin": "string",
+    "product_title": "string",
+    "discovery_match_rate": "number",
+    "total_queries": "number",
+    "full_matches": "number",
+    "partial_matches": "number",
+    "misses": "number",
+    "queries": [
+      {
+        "query": "string",
+        "match_type": "string",
+        "match_result": "string",
+        "reasoning": "string"
+      }
+    ],
+    "failed_queries": [
+      {
+        "query": "string",
+        "match_result": "string",
+        "recommendation": "string"
+      }
+    ],
+    "summary": "string"
+  },
+  "example_response": {
+    "asin": "sample string",
+    "product_title": "sample string",
+    "discovery_match_rate": 0,
+    "total_queries": 0,
+    "full_matches": 0,
+    "partial_matches": 0,
+    "misses": 0,
+    "queries": [
+      {
+        "query": "sample string",
+        "match_type": "sample string",
+        "match_result": "sample string",
+        "reasoning": "sample string"
+      }
+    ],
+    "failed_queries": [
+      {
+        "query": "sample string",
+        "match_result": "sample string",
+        "recommendation": "sample string"
+      }
+    ],
+    "summary": "sample string"
+  }
+}
